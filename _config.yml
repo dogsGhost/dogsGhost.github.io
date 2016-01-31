@@ -1,0 +1,9 @@
+# Site settings
+title: David Wilhelm
+email: davwilh@gmail.com
+description: artist | designer | developer
+github_url: "https://github.com/dogsGhost/"
+# Build settings
+markdown: kramdown
+permalink: /:title/
+excerpt_separator: <!-- end -->

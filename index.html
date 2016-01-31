@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+  {% assign sortedCats = post.categories | sort %}
+  <section class="box">
+    <h3 class="box-heading">{{ post.title }} <small>({{ post.date | date: "%Y" }})</small></h3>
+
+
+    <div class="inlineCollection">
+      {% for cat in sortedCats %}
+        <span class="inlineCollection-item">{{ cat }}</span>
+      {% endfor %}
+    </div>
+
+    <div class="content">
+      {{ post.excerpt }}
+    </div>
+
+
+    <div class="inlineCollection">
+      {% if post.demo_url and post.demo_url != '' %}
+        <a class="inlineCollection-item" href="{{ post.demo_url }}" target="_blank">view site</a>
+      {% endif %}
+
+      {% if post.on_github == true %}
+      <a class="inlineCollection-item" href="{{ site.github_url }}{{ post.title }}">view repo</a>
+      {% endif %}
+    </div>
+
+  </section>
+{% endfor %}
