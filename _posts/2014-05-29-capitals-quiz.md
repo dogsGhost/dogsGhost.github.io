@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "captials-quiz"
+title:  "capitals-quiz"
 date:   2014-05-29
 categories: jquery handlebars gulp coffeescript sass
-demo_url: "http://dogsghost.github.io/captials-quiz/"
+demo_url: "http://dogsghost.github.io/capitals-quiz/"
 on_github: true
 ---
 
