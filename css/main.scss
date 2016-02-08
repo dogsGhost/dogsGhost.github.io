@@ -35,12 +35,11 @@ h3 {
   margin: 0;
   font-weight: 600;
   font-family: $sans-serif;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 h1 {
   font: 400 1.125em/1 $sans-serif;
-  // text-align: right;
 }
 
 h2 {
@@ -67,12 +66,10 @@ a {
 
 .page-header {
   padding: 1em;
-  border-bottom: 1px solid $black;
-  // border-bottom: 1px solid lighten($black, 50%);
 
   a {
     text-decoration: none;
-    color: lighten($black, 20%);
+    font-size: 80%;
   }
 }
 
@@ -80,17 +77,16 @@ a {
 }
 
 .page-footer {
-  padding: 1em;
+  padding: 0 1em 1em;
   font-size: 80%;
-  color: lighten($black, 20%);
-  border-top: 1px solid $black;
-  // border-top: 1px solid lighten($black, 50%);
 }
 
 
 .box {
+  margin: 0 0 1.5em;
   padding: 1em;
-  border-top: 1px solid $black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15), 0 1px 2px rgba(0,0,0,0.25);
+  background: #fff;
 
   &:first-child {
     border: none;
@@ -107,9 +103,5 @@ a {
   &-item {
     padding: 0 0.5em;
     display: inline-block;
-
-    // &:after {
-    //   content: ',';
-    // }
   }
 }

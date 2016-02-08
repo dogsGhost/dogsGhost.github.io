@@ -7,6 +7,6 @@ demo_url: "http://dogsghost.github.io/storefronts/"
 on_github: true
 ---
 
-Under development. Public-facing site for Storefronts project.
+In development. Public-facing site for Storefronts project.
 
 <!-- end -->
