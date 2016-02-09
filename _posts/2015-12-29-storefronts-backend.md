@@ -2,8 +2,8 @@
 layout: post
 title:  "storefronts-backend"
 date:   2015-12-29
-categories: express react mongodb webpack es6 bootstrap sass
-demo_url: "http://storefronts-backend.herokuapp.com/api/stores"
+categories: express react mongodb webpack es6 bootstrap sass heroku
+demo_url: ""
 on_github: true
 ---
 

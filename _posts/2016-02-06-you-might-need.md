@@ -2,7 +2,7 @@
 layout: post
 title:  "you-might-need"
 date:   2016-02-06
-categories: ember es6 sass
+categories: ember ember-data firebase es6 sass
 demo_url: "https://you-might-need.firebaseapp.com"
 on_github: true
 ---
