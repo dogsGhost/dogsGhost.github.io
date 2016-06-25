@@ -4,22 +4,27 @@
 @charset "utf-8";
 
 $red: #EA0068;
-$green: #D0F1F5;
+$green: #0FC;
 $black: #222;
-$sans-serif: 'Open Sans', Arial, sans-serif;
-$serif: Georgia, serif;
+$white: #FFF;
+$sans-serif: sans-serif;
+$serif: serif;
 
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
+@mixin media-query($value) {
+    @media screen and (max-width: $value) {
         @content;
     }
 }
 
-@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css";
+html {
+  background: $green;
+}
 
 body {
-  font: 1em/1.5 sans-serif;
+  font: 1em/1.5 $sans-serif;
   color: $black;
+  max-width: 660px;
+  margin-left: 3em;
 }
 
 h1,
@@ -27,7 +32,7 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400;
-  font-family: sans-serif;
+  font-family: $serif;
   line-height: 1.1;
 }
 
@@ -62,8 +67,10 @@ p {
 }
 
 .box {
-  margin: 0 0 1.5em;
-  padding: 1em;
+  margin: 0 0 3em;
+  padding: 1em 2em;
+  background: $white;
+  box-shadow: 1em 1em 0 0 #000;
 
   &-heading {
     margin: 0 0 0.5rem;
