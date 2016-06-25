@@ -22,9 +22,9 @@ html {
 }
 
 body {
+  margin: 0;
   font: 1em/1.5 $mono;
   color: $black;
-  margin-left: 3em;
 }
 
 h1,
@@ -53,18 +53,31 @@ p {
   margin: 0 0 0.5em;
 }
 
-.page-wrapper {
-  padding: 3em 0 0;
+@-webkit-keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(90%);
+  }
 }
 
 .page-header {
-  position: absolute;
-  top: 1em;
-  left: 1em;
+  padding: 1em;
+  overflow: hidden;
 
-  a {
-    text-decoration: none;
+  h1 {
+    animation: slide 8s linear infinite alternate;
+
+    a {
+      text-decoration: none;
+    }
   }
+}
+
+.page-mainContent {
+  margin: 0 0 0 3em;
 }
 
 .box {
