@@ -7,6 +7,6 @@ demo_url: "http://davwilh.com/ncaa-picks-by-team-color"
 on_github: true
 ---
 
-Pick your NCAA March Madness bracket based solely on team colors.
+Pick your 2016 NCAA March Madness bracket based solely on team colors.
 
 <!-- end -->
