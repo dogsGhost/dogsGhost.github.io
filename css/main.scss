@@ -5,10 +5,11 @@
 
 $red: #EA0068;
 $green: #0FC;
-$black: #222;
+$black: #000;
 $white: #FFF;
 $sans-serif: sans-serif;
 $serif: serif;
+$mono: monospace;
 
 @mixin media-query($value) {
     @media screen and (max-width: $value) {
@@ -21,9 +22,8 @@ html {
 }
 
 body {
-  font: 1em/1.5 $sans-serif;
+  font: 1em/1.5 $mono;
   color: $black;
-  max-width: 660px;
   margin-left: 3em;
 }
 
@@ -32,12 +32,13 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400;
-  font-family: $serif;
+  font-family: $mono;
   line-height: 1.1;
 }
 
 h1 {
-  font-szie: 1.125em;
+  font-size: 1em;
+  line-height: 1;
 }
 
 h2 {
@@ -52,25 +53,26 @@ p {
   margin: 0 0 0.5em;
 }
 
+.page-wrapper {
+  padding: 3em 0 0;
+}
+
 .page-header {
-  padding: 1em;
+  position: absolute;
+  top: 1em;
+  left: 1em;
 
   a {
     text-decoration: none;
-    font-size: 80%;
   }
-}
-
-.page-footer {
-  padding: 0 1em 1em;
-  font-size: 80%;
 }
 
 .box {
   margin: 0 0 3em;
-  padding: 1em 2em;
+  padding: 2em;
+  max-width: 42em;
   background: $white;
-  box-shadow: 1em 1em 0 0 #000;
+  box-shadow: 1.5em 1.5em 0 0 $black;
 
   &-heading {
     margin: 0 0 0.5rem;
@@ -83,5 +85,9 @@ p {
   &-item {
     padding: 0 0.5em;
     display: inline-block;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
