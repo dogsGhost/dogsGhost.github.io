@@ -3,7 +3,7 @@ layout: post
 title:  "ArtInstallr"
 date:   2015-04-23
 categories: react gulp es6 bootstrap
-demo_url: "http://dogsghost.github.io/ArtInstallr/public/"
+demo_url: ""
 on_github: true
 ---
 
