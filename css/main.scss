@@ -3,8 +3,10 @@
 ---
 @charset "utf-8";
 
-$red: #EA0068;
-$green: #C0FFEE;
+$red: #DA587F;
+$green: #A6F8EC;
+$blue: #53BEDE;
+$blue--dark: #2E6AB3;
 $black: #000;
 $white: #FFF;
 $sans-serif: sans-serif;
@@ -12,13 +14,31 @@ $serif: serif;
 $mono: monospace;
 
 @mixin media-query($value) {
-    @media screen and (max-width: $value) {
+    @media (min-width: $value) {
         @content;
     }
 }
 
+@mixin scheme($color1, $color2) {
+  background: $color1;
+  background-image: linear-gradient(transparent, $color2);
+}
+
+$count: 1;
+$colorlist1: ($blue $green);
+$colorlist2: ($blue--dark $blue $red);
+
+@each $color1 in $colorlist1 {
+  @each $color2 in $colorlist2 {
+    .scheme--#{$count} {
+      @include scheme($color1, $color2);
+    }
+    $count: $count + 1;
+  }
+}
+
 html {
-  background: $green;
+  @include scheme($blue, $blue--dark);
 }
 
 body {
@@ -71,13 +91,17 @@ p {
     animation: slide 8s linear infinite alternate;
 
     a {
-      text-decoration: none;
+      color: $white;
     }
   }
 }
 
 .page-mainContent {
-  margin: 0 0 0 3em;
+  padding: 0 0 3em 2em;
+
+  @include media-query(36em) {
+    padding-left: 3em;
+  }
 }
 
 .box {
@@ -85,7 +109,11 @@ p {
   padding: 2em;
   max-width: 42em;
   background: $white;
-  box-shadow: 1.5em 1.5em 0 0 $black;
+  box-shadow: .75em .75em 0 0 $green, 1.5em 1.5em 0 0 $black;
+
+  &:last-of-type {
+    margin: 0;
+  }
 
   &-heading {
     margin: 0 0 0.5rem;
@@ -103,4 +131,10 @@ p {
       text-decoration: none;
     }
   }
+}
+
+.page-footer {
+  padding: 0.75em;
+  color: $red;
+  background: $red;
 }
