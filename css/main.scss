@@ -37,6 +37,10 @@ $colorlist2: ($blue--dark $blue $red);
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   @include scheme($blue, $blue--dark);
 }
@@ -53,27 +57,28 @@ h3 {
   margin: 0;
   font-weight: 400;
   font-family: $mono;
-  line-height: 1.1;
 }
 
 h1 {
-  font-size: 1em;
-  line-height: 1;
+  font-size: 0.833rem;
+  line-height: 1rem;
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.728rem;
+  line-height: 3rem;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.44rem;
+  line-height: 1.5rem;
 }
 
 p {
-  margin: 0 0 0.5em;
+  margin: 0 0 0.5rem;
 }
 
-@-webkit-keyframes slide {
+@keyframes slide {
   from {
     transform: translateX(0);
   }
@@ -84,7 +89,7 @@ p {
 }
 
 .page-header {
-  padding: 1em;
+  padding: 1.25rem 1em;
   overflow: hidden;
 
   h1 {
@@ -97,7 +102,7 @@ p {
 }
 
 .page-mainContent {
-  padding: 0 0 3em 2em;
+  padding: 0 0 3rem 2em;
 
   @include media-query(36em) {
     padding-left: 3em;
@@ -105,9 +110,9 @@ p {
 }
 
 .box {
-  margin: 0 0 3em;
-  padding: 2em;
-  max-width: 42em;
+  margin: 0 0 3rem;
+  padding: 1.5rem;
+  max-width: 45em;
   background: $white;
   box-shadow: .75em .75em 0 0 $green, 1.5em 1.5em 0 0 $black;
 
@@ -116,15 +121,15 @@ p {
   }
 
   &-heading {
-    margin: 0 0 0.5rem;
+    padding: 0 0 0.75rem;
   }
 }
 
 .inlineCollection {
-  padding: 0 0 0.5em;
+  padding: 0 0 0.75em;
 
   &-item {
-    padding: 0 0.5em;
+    padding: 0 0.75em 0 0;
     display: inline-block;
 
     &:hover {
