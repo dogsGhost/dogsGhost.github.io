@@ -3,7 +3,7 @@ layout: post
 title:  "rc-unique-multi-select"
 date:   2017-07-25
 categories: es6 react
-demo_url: ""
+demo_url: "http://davwilh.com/rc-unique-multi-select/"
 on_github: true
 ---
 
