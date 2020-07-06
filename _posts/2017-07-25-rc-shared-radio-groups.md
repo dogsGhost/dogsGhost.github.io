@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "rc-unique-multi-select"
+title:  "rc-sahred-radio-groups"
 date:   2017-07-25
 categories: es6 react
-demo_url: "http://davwilh.com/rc-unique-multi-select/"
+demo_url: "http://davwilh.com/rc-sahred-radio-groups/"
 on_github: true
 ---
 
